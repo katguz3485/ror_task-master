@@ -1,0 +1,17 @@
+language: ruby
+rvm:
+- 2.2.3
+before_install:
+  - gem update --system
+  - gem --version
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - psql -c 'create database project_test1;' -U postgres
+script:
+  - bundle exec rake db:setup
+  - bundle exec rake spec
+cache: bundler
+services:
+  - postgresql
+addons:
+  postgresql: "10.4"
