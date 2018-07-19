@@ -11,9 +11,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20180719202116) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "participations", force: :cascade do |t|
+    t.integer  "student_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "subject_item_id"
+  end
+
+  add_index "participations", ["student_id"], name: "index_participations_on_student_id", using: :btree
+  add_index "participations", ["subject_item_id"], name: "index_participations_on_subject_item_id", using: :btree
+
+  create_table "students", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subject_items", force: :cascade do |t|
+    t.integer  "teacher_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "participation_id"
+  end
+
+  add_index "subject_items", ["participation_id"], name: "index_subject_items_on_participation_id", using: :btree
+  add_index "subject_items", ["teacher_id"], name: "index_subject_items_on_teacher_id", using: :btree
+
+  create_table "teachers", force: :cascade do |t|
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "academic_title"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "participations", "students"
+  add_foreign_key "participations", "subject_items"
+  add_foreign_key "subject_items", "participations"
+  add_foreign_key "subject_items", "teachers"
 end

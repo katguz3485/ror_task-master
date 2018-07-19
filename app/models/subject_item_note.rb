@@ -1,4 +1,5 @@
 class SubjectItemNote < ActiveRecord::Base
+
   belongs_to :student
 
   validates :student_id, :subject_item_id, presence: true

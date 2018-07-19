@@ -1,0 +1,2 @@
+      invoke  active_record
+      remove    db/migrate/20180719190708_add_index_to_student.rb

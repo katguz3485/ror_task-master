@@ -22,4 +22,4 @@ RSpec.describe Participation do
     it { is_expected.to belong_to :subject_item }
     it { is_expected.to belong_to :student }
   end
-end
+  end

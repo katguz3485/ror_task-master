@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Teacher:
+  = @subject_item.teacher
+
+= link_to 'Edit', edit_subject_item_path(@subject_item)
+\|
+= link_to 'Back', subject_items_path

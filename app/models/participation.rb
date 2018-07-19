@@ -4,4 +4,7 @@ class Participation < ActiveRecord::Base
 
   validates :student, :subject_item, presence: true
   validates :student, uniqueness: { scope: :subject_item }
+
+
+
 end
