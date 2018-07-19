@@ -1,0 +1,9 @@
+= simple_form_for(@subject_item_note) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :student
+    = f.association :subject_item
+
+  .form-actions
+    = f.button :submit

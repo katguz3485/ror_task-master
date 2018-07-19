@@ -6,5 +6,4 @@ class Participation < ActiveRecord::Base
   validates :student, uniqueness: { scope: :subject_item }
 
 
-
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :subject_item_notes
   resources :subject_items
   resources :teachers
   resources :participations

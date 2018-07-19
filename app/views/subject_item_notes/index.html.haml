@@ -1,0 +1,23 @@
+%h1 Listing subject_item_notes
+
+%table
+  %thead
+    %tr
+      %th Student
+      %th Subject item
+      %th
+      %th
+      %th
+
+  %tbody
+    - @subject_item_notes.each do |subject_item_note|
+      %tr
+        %td= subject_item_note.student
+        %td= subject_item_note.subject_item
+        %td= link_to 'Show', subject_item_note
+        %td= link_to 'Edit', edit_subject_item_note_path(subject_item_note)
+        %td= link_to 'Destroy', subject_item_note, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Subject item note', new_subject_item_note_path
