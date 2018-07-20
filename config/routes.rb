@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   #get 'visitors', to: 'visitors#index'
   #
 
-  get 'reports', to: 'reports#subjects'
+  get 'report/subjects', to: 'reports#subjects'
 
   resources :visitors, only: [:index]
 
