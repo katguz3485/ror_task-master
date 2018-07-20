@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root 'visitors#index'
+  root to: 'visitors#index'
 
   resources :students do
     get :subjects
@@ -13,9 +13,12 @@ Rails.application.routes.draw do
 
   #get 'visitors', to: 'visitors#index'
   #
-  resources :visitors, only: [:index]
 
   get 'reports', to: 'reports#subjects'
+
+  resources :visitors, only: [:index]
+
+
 
 
 
