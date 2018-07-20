@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :subject_item_notes
   resources :subject_items
   resources :teachers

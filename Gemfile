@@ -20,6 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'dotenv-rails'
 gem 'gretel'
 
+
 group :development do
   gem 'better_errors'
   gem 'html2haml'
