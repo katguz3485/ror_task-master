@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180720083849) do
+ActiveRecord::Schema.define(version: 20180720092414) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,11 +27,12 @@ ActiveRecord::Schema.define(version: 20180720083849) do
   add_index "participations", ["subject_item_id"], name: "index_participations_on_subject_item_id", using: :btree
 
   create_table "students", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.string   "first_name"
     t.string   "last_name"
     t.date     "birthdate"
+    t.integer  "participation_id"
   end
 
   create_table "subject_item_notes", force: :cascade do |t|
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(version: 20180720083849) do
     t.integer  "subject_item_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "value"
   end
 
   add_index "subject_item_notes", ["student_id"], name: "index_subject_item_notes_on_student_id", using: :btree
