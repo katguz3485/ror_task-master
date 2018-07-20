@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe SubjectItemNote do
+
   describe 'validations' do
     it { is_expected.to validate_presence_of :student_id }
     it { is_expected.to validate_presence_of :subject_item_id }
