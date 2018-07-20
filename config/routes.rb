@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   #
   resources :visitors, only: [:index]
 
+  get 'reports', to: 'reports#subjects'
+
 
 
 end
