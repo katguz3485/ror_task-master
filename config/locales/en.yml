@@ -1,5 +1,6 @@
 en:
   navbar:
+    app_name: RoR Task
     students: Students
     teachers: Teachers
     reports: Reports
