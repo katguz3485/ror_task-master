@@ -1,6 +1,8 @@
 class StudentsController < ApplicationController
   expose(:student, attributes: :student_params)
-  expose(:student_subject_items) { student.subject_items }
+  expose(:student_subject_items) {student.subject_items}
+  expose(:students)
+
   before_filter :authenticate_user!
 
 
@@ -26,6 +28,7 @@ class StudentsController < ApplicationController
   end
 
   private
+
   def student_params
     params.require(:student).permit(:first_name, :last_name, :birthdate, subject_item_ids: [])
   end
