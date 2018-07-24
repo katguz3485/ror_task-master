@@ -13,4 +13,13 @@ class StudentDecorator < BaseDecorator
     end
 
   end
+
+  def birthdate_formatted
+    if birthdate == nil
+      return ''
+    else
+      birthdate.strftime('%Y-%m-%d')
+    end
+  end
+
 end
