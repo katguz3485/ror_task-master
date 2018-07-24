@@ -2,9 +2,7 @@ class StudentsController < ApplicationController
   expose(:student, attributes: :student_params)
   expose(:student_subject_items) {student.subject_items}
   expose(:students)
-
   before_filter :authenticate_user!
-
 
   def create
     if student.save

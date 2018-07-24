@@ -8,7 +8,6 @@ class StudentDecorator < BaseDecorator
 
     if student_notes.length > 0
       format('%.2f', student_notes.average(:value))
-      #format('%.2f', student_notes.sum(:value) / student_notes.length).round(2)
     else
       format('%.2f', 0)
     end
