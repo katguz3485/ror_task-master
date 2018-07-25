@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe VisitorsController do
+RSpec.describe PaymentsController do
   let(:user) { create :user }
 
   before { sign_in user }
@@ -11,4 +11,4 @@ RSpec.describe VisitorsController do
     it_behaves_like 'template rendering action', :index
   end
 
- end
+end
