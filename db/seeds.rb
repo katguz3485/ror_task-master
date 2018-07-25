@@ -41,7 +41,7 @@ end
       ),
       date: faked_date,
       sum: Faker::Number.decimal(2),
-  # tuition_fee:  Date.parse(faked_date).strftime('%B %Y')
+      tuition_fee:  faked_date.strftime('%B %Y')
   )
 end
 
