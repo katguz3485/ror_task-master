@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     get :subjects
   end
 
+  resources :payments
   #get 'visitor', to: 'visitors#index'
   #
 

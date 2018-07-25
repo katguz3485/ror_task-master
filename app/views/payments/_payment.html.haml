@@ -1,0 +1,6 @@
+- payments.each do |payment|
+  %tr
+    %td= payment.student.decorate.full_name
+    %td= payment.decorate.convert_sum_to_currency
+    %td= payment.date
+    %td= payment.decorate.format_tuition_fee_to_date

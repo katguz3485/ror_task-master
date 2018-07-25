@@ -1,0 +1,16 @@
+- breadcrumb :payments
+.payments
+  .payment-item
+    %table.table.table-condensed#products
+      %thead
+        %tr
+          %th= t('payment.student.columns.decorate.full_name')
+          %th= t('payment.columns.sum')
+          %th= t('payment.columns.date')
+          %th= t('payment.columns.tuition_fee')
+      %tbody
+        =render 'payment'
+
+
+
+

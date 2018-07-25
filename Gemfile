@@ -4,6 +4,7 @@ ruby '2.3.0'
 gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'decent_exposure'
+gem 'decent_decoration'
 gem 'devise'
 gem 'draper'
 gem 'font-awesome-rails'
@@ -20,6 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'dotenv-rails'
 gem 'gretel'
 gem 'rubocop'
+gem 'jquery-datatables-rails', '~> 3.4.0'
 
 
 group :development do
