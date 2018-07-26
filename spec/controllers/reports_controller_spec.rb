@@ -7,7 +7,6 @@ RSpec.describe ReportsController do
 
   describe 'GET #subjects' do
     subject { get :subjects }
-
     it_behaves_like 'template rendering action', :subjects
   end
 end
