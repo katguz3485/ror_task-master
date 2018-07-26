@@ -41,23 +41,24 @@ end
       ),
       date: faked_date,
       sum: Faker::Number.decimal(2),
-      tuition_fee:  faked_date.strftime('%B %Y')
+      tuition_fee: faked_date.strftime('%B %Y')
   )
-end
 
-students = Student.all
-SubjectItem.all.each do |subject_item|
-  subject_item.students << students.sample(rand(1..4))
-end
 
-SubjectItem.all.each do |subject_item|
-  subject_item.students.each do |student|
-    rand(1..5).times do
-      subject_item.subject_item_notes << SubjectItemNote.create(student: student,
-                                                                subject_item: subject_item,
-                                                                value: rand(1..6))
+  students = Student.all
+  SubjectItem.all.each do |subject_item|
+    subject_item.students << students.sample(rand(1..4))
+  end
+
+  SubjectItem.all.each do |subject_item|
+    subject_item.students.each do |student|
+      rand(1..5).times do
+        subject_item.subject_item_notes << SubjectItemNote.create(student: student,
+                                                                  subject_item: subject_item,
+                                                                  value: rand(1..6))
+      end
     end
   end
-end
 
-puts "Seeds: done"
+  puts "Seeds: done"
+end
