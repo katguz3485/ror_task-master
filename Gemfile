@@ -22,7 +22,7 @@ gem 'dotenv-rails'
 gem 'gretel'
 gem 'rubocop'
 gem 'jquery-datatables-rails', '~> 3.4.0'
-
+gem  'figaro'
 
 group :development do
   gem 'better_errors'
@@ -45,6 +45,8 @@ end
 group :production do
   gem 'puma'
   gem 'rails_12factor'
+  gem 'pg'
+  gem 'heroku-deflater'
 end
 
 group :test do
