@@ -47,6 +47,8 @@ group :production do
   gem 'puma'
   gem 'rails_12factor'
   gem 'heroku-deflater'
+  gem 'pg'
+
 end
 
 group :test do
