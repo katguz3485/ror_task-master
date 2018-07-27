@@ -23,6 +23,8 @@ gem 'gretel'
 gem 'rubocop'
 gem 'jquery-datatables-rails', '~> 3.4.0'
 gem  'figaro'
+gem 'faker', '~> 1.9', '>= 1.9.1'
+
 
 group :development do
   gem 'better_errors'
@@ -36,7 +38,6 @@ end
 group :development, :test do
   gem 'byebug'
   gem 'factory_girl_rails'
-  gem 'faker'
   gem 'rspec-rails'
   gem 'spring'
   gem 'web-console', '~> 2.0'
@@ -45,7 +46,6 @@ end
 group :production do
   gem 'puma'
   gem 'rails_12factor'
-  gem 'pg'
   gem 'heroku-deflater'
 end
 
@@ -55,4 +55,5 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', require: false
+
 end
