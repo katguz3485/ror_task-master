@@ -1,4 +1,4 @@
-class Student < ActiveRecord::Base
+class Student <  ApplicationRecord
   has_many :participations, dependent: :destroy
   has_many :subject_item_notes, dependent: :destroy
   has_many :subject_items, dependent: :destroy, through: :participations

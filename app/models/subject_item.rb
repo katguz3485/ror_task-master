@@ -1,9 +1,9 @@
-class SubjectItem < ActiveRecord::Base
+class SubjectItem < ApplicationRecord
   has_many :participations, dependent: :destroy
   has_many :students, through: :participations
   has_many :subject_item_notes
   belongs_to :teacher
-  belongs_to :student
+  belongs_to :student, optional: true
 
   validates :title, presence: true
 

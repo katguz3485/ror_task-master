@@ -1,4 +1,4 @@
-class Teacher < ActiveRecord::Base
+class Teacher < ApplicationRecord
   TITLES = %w(Dr. Prof. TA)
   has_many :subject_items, dependent: :nullify
 

@@ -1,4 +1,4 @@
-class CreateSubjectItemNotes < ActiveRecord::Migration
+class CreateSubjectItemNotes < ActiveRecord::Migration[5.2]
   def change
     create_table :subject_item_notes do |t|
       t.references :student, index: true, foreign_key: true

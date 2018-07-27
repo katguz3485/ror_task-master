@@ -1,6 +1,6 @@
-class SubjectItemNote < ActiveRecord::Base
+class SubjectItemNote < ApplicationRecord
 
-  belongs_to :student
+  belongs_to :student, optional: true
   belongs_to :subject_item
 
 
