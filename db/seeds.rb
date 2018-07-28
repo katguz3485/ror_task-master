@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'faker'
-puts "Seeds: start"
-TEACHER_TITLES = %w(Dr. Prof. TA)
+puts 'Seeds: start'
+TEACHER_TITLES = %w[Dr. Prof. TA].freeze
 
 User.create!(email: 'admin@admin.com', password: 'adminadmin')
 
@@ -10,41 +12,39 @@ end
 
 3.times do
   Teacher.create!(
-      first_name: Faker::Name.first_name,
-      last_name: Faker::Name.last_name,
-      academic_title: TEACHER_TITLES.sample
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    academic_title: TEACHER_TITLES.sample
   )
 end
 
 teachers = Teacher.all
 5.times do
   SubjectItem.create!(
-      title: Faker::Lorem.sentence,
-      teacher: teachers.sample
+    title: Faker::Lorem.sentence,
+    teacher: teachers.sample
   )
 end
 
 25.times do
   Student.create!(
-      first_name: Faker::Name.first_name,
-      last_name: Faker::Name.last_name,
-      birthdate: Faker::Date.birthday
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    birthdate: Faker::Date.birthday
   )
 end
 
-
 5.times do
   Payment.create!(
-      student: Student.create!(
-          first_name: Faker::Name.first_name,
-          last_name: Faker::Name.last_name,
-          birthdate: Faker::Date.birthday
-      ),
-      date: faked_date,
-      sum: Faker::Number.decimal(2),
-      tuition_fee: faked_date.strftime('%B %Y')
+    student: Student.create!(
+      first_name: Faker::Name.first_name,
+      last_name: Faker::Name.last_name,
+      birthdate: Faker::Date.birthday
+    ),
+    date: faked_date,
+    sum: Faker::Number.decimal(2),
+    tuition_fee: faked_date.strftime('%B %Y')
   )
-
 
   students = Student.all
   SubjectItem.all.each do |subject_item|
@@ -61,5 +61,5 @@ end
     end
   end
 
-  puts "Seeds: done"
+  puts 'Seeds: done'
 end

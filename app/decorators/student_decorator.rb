@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class StudentDecorator < BaseDecorator
   delegate_all
 
@@ -7,7 +9,7 @@ class StudentDecorator < BaseDecorator
 
   def avg_notes(subject_item)
     student_notes = subject_item.subject_item_notes
-    if student_notes.length > 0
+    if !student_notes.empty?
       format('%.2f', student_notes.average(:value))
     else
       format('%.2f', 0)
@@ -15,8 +17,8 @@ class StudentDecorator < BaseDecorator
   end
 
   def birthdate_formatted
-    if birthdate == nil
-      return ''
+    if birthdate.nil?
+      ''
     else
       birthdate.strftime('%Y-%m-%d')
     end

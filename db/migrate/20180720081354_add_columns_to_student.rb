@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddColumnsToStudent < ActiveRecord::Migration[5.2]
   def change
     add_column :students, :first_name, :string

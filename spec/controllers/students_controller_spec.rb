@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe StudentsController do
@@ -7,7 +9,7 @@ RSpec.describe StudentsController do
 
   describe 'GET #show' do
     let(:student) { create :student }
-    subject { get :show, id: student.id }
+    subject { get :show, params: { id: student.id } }
 
     it_behaves_like 'template rendering action', :show
   end
@@ -20,7 +22,7 @@ RSpec.describe StudentsController do
 
   describe 'GET #edit' do
     let(:student) { create :student }
-    subject { get :edit, id: student.id }
+    subject { get :edit, params: { id: student.id } }
 
     it_behaves_like 'template rendering action', :edit
   end
@@ -33,7 +35,7 @@ RSpec.describe StudentsController do
 
   describe 'POST #create' do
     let!(:params) { { student: build(:student).attributes } }
-    subject { post :create, params }
+    subject { post :create, params: params }
 
     context 'success' do
       it { is_expected.to redirect_to student_path(controller.student) }
@@ -44,7 +46,7 @@ RSpec.describe StudentsController do
       end
 
       it 'creates student' do
-        expect{ subject }.to change(Student, :count).by(1)
+        expect { subject }.to change(Student, :count).by(1)
       end
     end
 
@@ -62,7 +64,7 @@ RSpec.describe StudentsController do
     let!(:params) do
       { id: student.id, student: { first_name: first_name } }
     end
-    subject { put :update, params }
+    subject { put :update, params: params }
 
     context 'success' do
       it { is_expected.to redirect_to student_path(controller.student) }
@@ -73,8 +75,8 @@ RSpec.describe StudentsController do
       end
 
       context 'updates student' do
-        subject { -> { put :update, params } }
-        it { is_expected.to change{ student.reload.first_name }.to(first_name) }
+        subject { -> { put :update, params: params } }
+        it { is_expected.to change { student.reload.first_name }.to(first_name) }
       end
     end
 
@@ -87,7 +89,7 @@ RSpec.describe StudentsController do
 
   describe 'DELETE #destroy' do
     let!(:student) { create :student }
-    subject { delete :destroy, id: student.id }
+    subject { delete :destroy, params: { id: student.id } }
 
     it { is_expected.to redirect_to students_path }
 
@@ -97,7 +99,7 @@ RSpec.describe StudentsController do
     end
 
     it 'destroys student' do
-      expect{ subject }.to change(Student, :count).by(-1)
+      expect { subject }.to change(Student, :count).by(-1)
     end
   end
 end

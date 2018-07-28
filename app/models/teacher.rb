@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class Teacher < ApplicationRecord
-  TITLES = %w(Dr. Prof. TA)
+  TITLES = %w[Dr. Prof. TA].freeze
   has_many :subject_items, dependent: :nullify
 
   validates :first_name, :last_name, presence: true

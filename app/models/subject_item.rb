@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SubjectItem < ApplicationRecord
   has_many :participations, dependent: :destroy
   has_many :students, through: :participations
@@ -7,5 +9,5 @@ class SubjectItem < ApplicationRecord
 
   validates :title, presence: true
 
-  scope :not_assigned_or_assigned_to_teacher, -> (teacher) { where('teacher_id IS ? or teacher_id = ?', nil, teacher) }
+  scope :not_assigned_or_assigned_to_teacher, ->(teacher) { where('teacher_id IS ? or teacher_id = ?', nil, teacher) }
 end

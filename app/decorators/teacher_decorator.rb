@@ -1,5 +1,6 @@
-class TeacherDecorator < BaseDecorator
+# frozen_string_literal: true
 
+class TeacherDecorator < BaseDecorator
   def full_name
     "#{first_name} #{last_name}"
   end
@@ -7,5 +8,4 @@ class TeacherDecorator < BaseDecorator
   def full_name_with_title
     "#{full_name} [#{academic_title}]"
   end
-
 end

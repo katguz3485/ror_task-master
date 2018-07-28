@@ -1,5 +1,6 @@
-Rails.application.routes.draw do
+# frozen_string_literal: true
 
+Rails.application.routes.draw do
   devise_for :users
 
   root to: 'visitors#index'
@@ -13,12 +14,10 @@ Rails.application.routes.draw do
   end
 
   resources :payments
-  #get 'visitor', to: 'visitors#index'
+  # get 'visitor', to: 'visitors#index'
   #
 
   get 'report/subjects', to: 'reports#subjects'
 
   resources :visitors, only: [:index]
-
-
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe PaymentsController do
@@ -10,5 +12,4 @@ RSpec.describe PaymentsController do
 
     it_behaves_like 'template rendering action', :index
   end
-
 end

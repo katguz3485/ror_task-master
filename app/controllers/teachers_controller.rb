@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TeachersController < ApplicationController
   expose :teachers, -> { Teacher.all }
   expose(:teacher, attributes: :teacher_params)

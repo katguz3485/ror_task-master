@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe VisitorsController do
@@ -10,5 +12,4 @@ RSpec.describe VisitorsController do
 
     it_behaves_like 'template rendering action', :index
   end
-
- end
+end
