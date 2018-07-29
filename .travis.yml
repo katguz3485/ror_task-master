@@ -1,13 +1,12 @@
 language: ruby
-cache:
-- bundler
+before_install:
+- gem install bundler
 before_script:
-- bundle exec rake db:create
-- bundle exec rake db:migrate
-- bundle exec rake assets:precompile
-env:
-  global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+- cp config/database.yml.ci config/database.yml
+- psql -c 'create database travis_ci_test;' -U postgres
+script:
+- bundle exec rails db:migrate RAILS_ENV=test
+- bundle exec rspec
 deploy:
   provider: heroku
   api_key:
@@ -15,3 +14,7 @@ deploy:
   app: rails-task-master
   on:
     repo: katguz3485/rails-task-master
+
+
+
+

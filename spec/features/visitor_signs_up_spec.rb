@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+require 'rails_helper'
+
 
 feature 'Visitor signs up' do
   let(:user) { create :user }

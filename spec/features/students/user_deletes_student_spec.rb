@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+require 'rails_helper'
+
 
 feature 'User deletes student' do
   let!(:student) { create :student, first_name: 'Jan', last_name: 'Abacki' }

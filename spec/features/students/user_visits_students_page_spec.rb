@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+require 'rails_helper'
+
 
 feature 'User visits students page' do
   let!(:student_1) { create :student, first_name: 'Jan' }
