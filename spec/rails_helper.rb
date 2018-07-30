@@ -3,11 +3,12 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 require 'rspec/rails'
-require 'rspec/rails'
 require 'capybara/rspec'
+require 'capybara/rails'
 require 'database_cleaner'
 require 'support/factory_bot'
-require 'capybara/rspec'
+require 'shoulda/matchers'
+
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
 abort('The Rails environment is running in production mode!') if Rails.env.production?
@@ -21,7 +22,7 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = false
   config.infer_spec_type_from_file_location!
   config.include Devise::Test::ControllerHelpers, type: :controller
-  config.disable_monkey_patching!
+  #config.disable_monkey_patching!
   config.include Capybara::DSL
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
