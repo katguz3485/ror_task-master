@@ -60,5 +60,7 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
-  gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
+  gem 'shoulda'
+  gem 'shoulda-matchers'
+  #gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
 end

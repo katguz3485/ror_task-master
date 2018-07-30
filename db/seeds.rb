@@ -4,7 +4,7 @@ require 'faker'
 puts 'Seeds: start'
 TEACHER_TITLES = %w[Dr. Prof. TA].freeze
 
-#User.create!(email: 'admin@admin.com', password: 'adminadmin')
+User.create!(email: 'admin@admin.com', password: 'adminadmin')
 
 def faked_date
   Faker::Date.backward

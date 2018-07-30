@@ -7,7 +7,8 @@ require 'capybara/rspec'
 require 'capybara/rails'
 require 'database_cleaner'
 require 'support/factory_bot'
-require 'shoulda/matchers'
+require 'shoulda-matchers'
+require 'shoulda'
 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
@@ -53,3 +54,4 @@ RSpec.configure do |config|
     end
   end
 end
+

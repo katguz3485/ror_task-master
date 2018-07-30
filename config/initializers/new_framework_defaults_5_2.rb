@@ -35,3 +35,4 @@
 
 # Use SHA-1 instead of MD5 to generate non-sensitive digests, such as the ETag header.
 # Rails.application.config.active_support.use_sha1_digests = true
+Rails.application.config.active_record.belongs_to_required_by_default = false

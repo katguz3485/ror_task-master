@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe SubjectItem do
+RSpec.describe SubjectItem, type: :model do
   describe 'validations' do
     it { is_expected.to validate_presence_of :title }
   end

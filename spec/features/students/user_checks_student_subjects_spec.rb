@@ -10,7 +10,7 @@ feature 'User checks student subjects' do
   let!(:participant) { create :participation, student: student, subject_item: subject_item }
   let!(:subject_item_note) { create :subject_item_note, subject_item: subject_item, student: student }
 
-  background do
+  before do
     sign_in
     expect(page).to have_content 'Logout'
     visit students_path

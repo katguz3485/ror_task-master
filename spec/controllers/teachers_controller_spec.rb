@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe TeachersController do
+RSpec.describe TeachersController, type: :controller do
   let(:user) { create :user }
 
   before { sign_in user }
