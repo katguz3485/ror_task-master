@@ -4,7 +4,7 @@ require 'spec_helper'
 require 'rails_helper'
 
 
-feature 'User edits student' do
+RSpec.feature 'User edits student', type: :feature do
   let!(:student) { create :student, first_name: 'Jan', last_name: 'Abacki' }
   let!(:subject_item) { create :subject_item, title: 'Math' }
 

@@ -1,9 +1,8 @@
 require 'spec_helper'
 require 'rails_helper'
 
+RSpec.feature 'Visitors signs up', type: :feature do
 
-
-feature 'Visitor signs up' do
   let(:user) { create :user }
 
   scenario 'with valid email and password' do

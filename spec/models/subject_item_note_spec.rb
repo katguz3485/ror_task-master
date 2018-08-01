@@ -9,8 +9,8 @@ RSpec.describe SubjectItemNote, type: :model do
   end
 
   describe 'database columns' do
-    it { should have_db_column :student_id }
-    it { should have_db_column :subject_item_id }
+    it { is_expected.to have_db_column :student_id }
+    it { is_expected.to have_db_column :subject_item_id }
   end
 
   describe 'associations' do

@@ -1,10 +1,9 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
+require 'spec_helper'
 
+RSpec.feature 'User checks student details', type: :feature do
 
-feature 'User checks student details' do
-  let!(:student) { create :student, first_name: 'Jan', last_name: 'Nowak' }
+  let!(:student) {create :student, first_name: 'Jan', last_name: 'Nowak'}
 
   background do
     sign_in
@@ -18,4 +17,7 @@ feature 'User checks student details' do
       expect(page).to have_content 'RoR Workhops » Students » Jan Nowak'
     end
   end
+
+
+
 end

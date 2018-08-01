@@ -3,7 +3,7 @@
 require 'spec_helper'
 require 'rails_helper'
 
-feature 'User deletes teacher' do
+RSpec.feature 'User deletes teacher', type: :feature do
   let!(:teacher) { create :teacher, first_name: 'Pies', last_name: 'Pluto', academic_title: 'Dr.' }
 
   background do

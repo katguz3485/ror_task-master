@@ -11,9 +11,9 @@ RSpec.describe Teacher, type: :model do
   end
 
   describe 'database columns' do
-    it { should have_db_column :first_name }
-    it { should have_db_column :last_name }
-    it { should have_db_column :academic_title }
+    it { is_expected.to have_db_column :first_name }
+    it { is_expected.to have_db_column :last_name }
+    it { is_expected.to have_db_column :academic_title }
   end
 
   describe 'associations' do
@@ -21,6 +21,6 @@ RSpec.describe Teacher, type: :model do
   end
 
   describe 'nested attributes' do
-    it { should accept_nested_attributes_for :subject_items }
+    it { is_expected.to accept_nested_attributes_for :subject_items }
   end
 end
