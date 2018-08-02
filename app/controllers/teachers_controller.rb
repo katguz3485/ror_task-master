@@ -5,6 +5,7 @@ class TeachersController < ApplicationController
   expose :teachers, -> {Teacher.all}
   expose(:teacher, attributes: :teacher_params)
   expose(:teacher_subject_items) {teacher.subject_items}
+  skip_before_action :verify_authenticity_token
 
   def create
     if teacher.save
