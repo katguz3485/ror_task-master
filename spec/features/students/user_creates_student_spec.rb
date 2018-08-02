@@ -1,10 +1,8 @@
-# frozen_string_literal: true
-
 require 'spec_helper'
 require 'rails_helper'
 
+feature 'User creates student', type: :feature do
 
-feature 'User creates student' do
   background do
     sign_in
     expect(page).to have_content 'Logout'

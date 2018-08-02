@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe VisitorsController do
+RSpec.describe VisitorsController, type: :controller do
   let(:user) { create :user }
 
   before { sign_in user }

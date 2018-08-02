@@ -5,6 +5,7 @@ class StudentsController < ApplicationController
   expose(:student_subject_items) { student.subject_items }
   expose :students, -> { Student.all }
   before_action :authenticate_user!
+  skip_before_action :verify_authenticity_token
 
   def create
     if student.save

@@ -10,13 +10,15 @@ RSpec.describe Payment, type: :model do
   end
 
   describe 'database columns' do
-    it { should have_db_column :student_id }
-    it { should have_db_column :sum }
-    it { should have_db_column :tuition_fee }
-    it { should have_db_column :date }
+    it { is_expected.to have_db_column :student_id }
+    it { is_expected.to have_db_column :sum }
+    it { is_expected.to have_db_column :tuition_fee }
+    it { is_expected.to have_db_column :date }
   end
 
   describe 'associations' do
-    it { is_expected.to belong_to :student }
+    it { is_expected.to belong_to(:student)}
+    #it { is_expected_to.belong_to(:student).optional }
+
   end
 end

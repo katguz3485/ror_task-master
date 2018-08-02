@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe PaymentsController do
+RSpec.describe PaymentsController, type: :controller do
   let(:user) { create :user }
 
   before { sign_in user }

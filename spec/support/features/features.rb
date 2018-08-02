@@ -1,5 +1,5 @@
-# frozen_string_literal: true
 require 'rails_helper'
+require 'spec_helper'
 module Features
   module SessionHelpers
     def sign_up_with(email, password)
@@ -25,3 +25,4 @@ module Features
     end
   end
 end
+

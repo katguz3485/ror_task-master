@@ -3,7 +3,7 @@
 require 'spec_helper'
 require 'rails_helper'
 
-feature 'User creates teacher' do
+RSpec.feature 'User creates teacher', type: :feature do
   background do
     sign_in
     expect(page).to have_content 'Logout'

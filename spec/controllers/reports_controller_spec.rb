@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe ReportsController do
+RSpec.describe ReportsController, type: :controller do
   let(:user) { create :user }
 
   before { sign_in user }
