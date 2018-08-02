@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'rails_helper'
 
-RSpec.feature 'User visits students page', type: :feature do
+feature 'User visits students page', type: :feature do
   let!(:student_1) { create :student, first_name: 'Jan' }
   let!(:student_2) { create :student, first_name: 'Adam' }
 

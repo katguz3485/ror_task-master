@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'rails_helper'
 
-RSpec.feature 'Visitors signs up', type: :feature do
+feature 'Visitors signs up', type: :feature do
 
   let(:user) { create :user }
 

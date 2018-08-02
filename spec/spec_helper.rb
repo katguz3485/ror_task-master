@@ -2,7 +2,6 @@
 require 'rails/all'
 require File.expand_path("../../config/environment", __FILE__)
 require 'factory_bot'
-require 'capybara/rails'
 require 'capybara/rspec'
 
 
@@ -35,6 +34,10 @@ RSpec.configure do |config|
   # inherited by the metadata hash of host groups and examples, rather than
   # triggering implicit auto-inclusion in groups with matching metadata.
 
+  config.shared_context_metadata_behavior = :apply_to_host_groups
+  config.filter_run_when_matching :focus
+  config.example_status_persistence_file_path = "spec/examples.txt"
+  config.default_formatter = 'doc' if config.files_to_run.one?
 
 
 

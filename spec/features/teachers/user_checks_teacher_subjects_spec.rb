@@ -3,7 +3,7 @@
 require 'spec_helper'
 require 'rails_helper'
 
-RSpec.feature 'User checks teacher subjects', type: :feature do
+feature 'User checks teacher subjects', type: :feature do
   let!(:teacher) { create :teacher, first_name: 'Pies', last_name: 'Pluto', academic_title: 'Dr.' }
   let!(:subject_item) { create :subject_item, title: 'Boring subject item', teacher: teacher }
 

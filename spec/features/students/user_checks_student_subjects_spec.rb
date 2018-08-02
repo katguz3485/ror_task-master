@@ -2,10 +2,10 @@
 
 require 'spec_helper'
 require 'rails_helper'
+require 'capybara/rspec'
 
+feature 'User checks student subjects', type: :feature do
 
-RSpec.feature 'User checks student subjects', type: :feature do
-  include Features
   let!(:student) { create :student, first_name: 'Jan', last_name: 'Nowak' }
   let!(:subject_item) { create :subject_item, title: 'Math' }
   let!(:participant) { create :participation, student: student, subject_item: subject_item }

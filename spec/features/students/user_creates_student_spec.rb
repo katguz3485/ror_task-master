@@ -1,7 +1,8 @@
 require 'spec_helper'
 require 'rails_helper'
 
-RSpec.feature 'User creates student', type: :feature do
+feature 'User creates student', type: :feature do
+
   background do
     sign_in
     expect(page).to have_content 'Logout'

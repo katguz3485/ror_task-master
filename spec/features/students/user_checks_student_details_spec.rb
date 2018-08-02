@@ -1,8 +1,9 @@
 require 'rails_helper'
 require 'spec_helper'
+require 'capybara/rspec'
+require 'capybara-screenshot/rspec'
 
-RSpec.feature 'User checks student details', type: :feature do
-
+feature 'User checks student details', type: :feature do
   let!(:student) {create :student, first_name: 'Jan', last_name: 'Nowak'}
 
   background do
@@ -12,12 +13,13 @@ RSpec.feature 'User checks student details', type: :feature do
     find(:xpath, "//a[@title='show']").click
   end
 
+
   scenario do
+    Capybara::Screenshot.screenshot_and_open_image
     within('.breadcrumbs') do
       expect(page).to have_content 'RoR Workhops » Students » Jan Nowak'
     end
   end
-
 
 
 end
