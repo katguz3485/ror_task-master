@@ -266,6 +266,11 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   #Rails.application.credentials.secret_key
 
-  config.secret_key = Rails.application.credentials.secret_key
+  config.secret_key = Rails.application.credentials.secret_key if Rails.env.production?
   #config.secret_key = 'value'
+  #
+  #
+
+
+
 end

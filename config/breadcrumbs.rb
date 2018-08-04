@@ -27,6 +27,15 @@ crumb :teacher do |teacher|
   parent :teachers
 end
 
+crumb :subject_item do
+  link t('navbar.subject_item'), subject_items
+end 
+
+crumb :subject_item do |subject_item|
+  link "#{subject_item.title}", subject_item_path
+  parent :subject_items
+end
+
 crumb :teacher_subjects do |teacher|
   link "#{teacher.first_name} #{teacher.last_name} #{t('shared.subjects')}", teacher_subjects_path(teacher)
   parent :teachers

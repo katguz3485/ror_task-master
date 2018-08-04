@@ -1,8 +1,11 @@
-= simple_form_for(@subject_item) do |f|
+= simple_form_for(subject_item) do |f|
   = f.error_notification
-
   .form-inputs
-    = f.association :teacher
+    = f.association :teacher, label_method: :last_name, value_method: :id, label: 'Teacher'
+    .form-inputs
+      = f.input :title
+    .form-actions
+      = f.button :submit
 
-  .form-actions
-    = f.button :submit
+
+

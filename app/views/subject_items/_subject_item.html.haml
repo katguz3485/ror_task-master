@@ -1,0 +1,15 @@
+%tr
+  %td= subject_item.title
+  %td= subject_item.decorate.teacher_full_name
+  %td
+    = link_to subject_item_path(subject_item), {title: t('shared.show')} do
+      %button.btn.btn-default
+        =fa_icon "search"
+    = link_to edit_subject_item_path(subject_item), {title: t('shared.edit')} do
+      %button.btn.btn-default
+        =fa_icon "edit"
+    = link_to subject_item_path(subject_item), {method: :delete, title: t('shared.delete')} do
+      %button.btn.btn-default
+        =fa_icon "times"
+
+

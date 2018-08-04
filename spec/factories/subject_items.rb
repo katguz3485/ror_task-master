@@ -2,6 +2,6 @@
 
 FactoryBot.define do
   factory :subject_item do
-    title { Faker::Job.title }
+    title { Faker::Name.title }
   end
 end

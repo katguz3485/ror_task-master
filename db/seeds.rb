@@ -26,6 +26,15 @@ teachers = Teacher.all
   )
 end
 
+
+5.times do
+  SubjectItem.create!(
+    title: Faker::Lorem.sentence
+
+
+  )
+end
+
 25.times do
   Student.create!(
     first_name: Faker::Name.first_name,
