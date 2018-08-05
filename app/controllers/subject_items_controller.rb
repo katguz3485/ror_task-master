@@ -1,6 +1,5 @@
 class SubjectItemsController < ApplicationController
   expose(:subject_item, attributes: :subject_item_params)
-  #expose(:student_subject_items) { student.subject_items }
   expose :subject_items, -> { SubjectItem.all }
 
   before_action :authenticate_user!
@@ -20,7 +19,7 @@ class SubjectItemsController < ApplicationController
 
   def update
     if subject_item.save
-      redirect_to subject_item_path(subject_item), notice: I18n.t('shared.updated', resource: 'Student')
+      redirect_to subject_item_path(subject_item), notice: I18n.t('shared.updated', resource: 'Subject Item')
     else
       render :edit
     end
@@ -28,7 +27,7 @@ class SubjectItemsController < ApplicationController
 
   def destroy
     subject_item.destroy
-    redirect_to subject_items_path, notice: I18n.t('shared.deleted', resource: 'Student')
+    redirect_to subject_items_path, notice: I18n.t('shared.deleted', resource: 'Subject Item')
   end
 
   private

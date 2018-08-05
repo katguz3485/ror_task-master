@@ -1,14 +1,13 @@
 %h1 Listing subject_items
 
-%table
+%table.table.table-condensed
   %thead
     %tr
-      %th Subject title with assigned teacher
-      %th
-      %th
+      %th Subject title
+      %th Teacher name
       %th
 
   %tbody
     =render subject_items
 
-= link_to 'New Subject item', new_subject_item_path
+= link_to 'New Subject item', new_subject_item_path, class: 'btn btn-default'
