@@ -9,6 +9,7 @@ en:
     signin: Sign in
     signup: Sign up
     payments: Payments
+    subject_item_notes: "Subject Item Notes"
   shared:
     created: "%{resource} has been created!"
     updated: "%{resource} has been updated!"

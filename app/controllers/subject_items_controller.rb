@@ -5,9 +5,6 @@ class SubjectItemsController < ApplicationController
   before_action :authenticate_user!
   skip_before_action :verify_authenticity_token
 
-  def index
-
-  end
 
   def create
     if subject_item.save
@@ -33,7 +30,7 @@ class SubjectItemsController < ApplicationController
   private
 
   def subject_item_params
-    params.require(:subject_item).permit(:title, :teacher_id)
+    params.require(:subject_item_note).permit(:value, :student_id)
   end
 
 end
