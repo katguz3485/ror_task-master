@@ -21,6 +21,11 @@ class SubjectItemNotesController < ApplicationController
     end
   end
 
+  def destroy
+    subject_item.destroy
+    redirect_to subject_item_notes_path, notice: I18n.t('shared.deleted', resource: 'Subject Item Note')
+  end
+
   private
 
   def subject_item_note_params
