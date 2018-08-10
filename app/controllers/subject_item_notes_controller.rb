@@ -14,7 +14,7 @@ class SubjectItemNotesController < ApplicationController
   end
 
   def update
-    if subject_item_note.save
+    if subject_item_note.update(subject_item_note_params)
       redirect_to subject_item_note_path(subject_item_note), notice: I18n.t('shared.updated', resource: 'Subject Item Note')
     else
       render :edit

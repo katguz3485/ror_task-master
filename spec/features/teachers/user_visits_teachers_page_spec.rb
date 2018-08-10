@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'spec_helper'
 require 'rails_helper'
 
@@ -8,7 +6,7 @@ feature 'User visits teachers page', type: :feature do
   let!(:teacher_2) { create :teacher, first_name: 'Donald', last_name: 'Kaczor', academic_title: 'Prof.' }
 
 
-  background do
+  before(:each) do
     sign_in
     expect(page).to have_content 'Logout'
     visit teachers_path
@@ -24,9 +22,5 @@ feature 'User visits teachers page', type: :feature do
 
   end
 
-  scenario 'only when sign in' do
-    logout
-    visit teachers_path
-    expect(page).to have_content 'You need to sign in or sign up before continuing.'
-  end
+
 end

@@ -24,6 +24,7 @@ RSpec.configure do |config|
   config.include RSpec::Matchers
   config.include Features::SessionHelpers, type: :feature
   config.include Devise::Test::ControllerHelpers, type: :controller
+
   config.infer_spec_type_from_file_location!
 
 

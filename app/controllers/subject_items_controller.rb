@@ -1,6 +1,6 @@
 class SubjectItemsController < ApplicationController
   expose(:subject_item, attributes: :subject_item_params)
-  expose :subject_items, -> { SubjectItem.all }
+  expose :subject_items, -> {SubjectItem.all}
 
   before_action :authenticate_user!
   skip_before_action :verify_authenticity_token
@@ -8,14 +8,14 @@ class SubjectItemsController < ApplicationController
 
   def create
     if subject_item.save
-      redirect_to subject_item_path(subject_item), notice: I18n.t('shared.created', resource: 'Student')
+      redirect_to subject_item_path(subject_item), notice: I18n.t('shared.created', resource: 'Subject Item')
     else
       render :new
     end
   end
 
   def update
-    if subject_item.save
+    if subject_item.update(subject_item_params)
       redirect_to subject_item_path(subject_item), notice: I18n.t('shared.updated', resource: 'Subject Item')
     else
       render :edit
@@ -30,7 +30,8 @@ class SubjectItemsController < ApplicationController
   private
 
   def subject_item_params
-    params.require(:subject_item_note).permit(:value, :student_id)
+    params.require(:subject_item).permit(:title, :teacher_id)
   end
+
 
 end
