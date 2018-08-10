@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 crumb :root do
-  link 'RoR Workhops', root_path
+  link 'RoR Workshops', root_path
 end
 
 crumb :students do

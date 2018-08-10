@@ -270,6 +270,7 @@ Devise.setup do |config|
   #config.secret_key = 'value'
   #
   #
+  config.secret_key = 'a57ec5d729b1a3d9309fce00e38b0ded52162861b546222980107e36d2bae286c78f1e69f98824d0168ac74b8daabcedd3fcfd3479cb54e68d380464abcd88f5'
 
 
 

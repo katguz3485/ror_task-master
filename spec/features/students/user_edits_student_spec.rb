@@ -4,8 +4,8 @@ require 'spec_helper'
 require 'rails_helper'
 
 feature 'User edits student', type: :feature do
-  let!(:student) { create :student, first_name: 'Jan', last_name: 'Abacki' }
-  let!(:subject_item) { create :subject_item, title: 'Math' }
+  let!(:student) {create :student, first_name: 'Jan', last_name: 'Abacki'}
+  let!(:subject_item) {create :subject_item, title: 'Math'}
 
   background do
     sign_in
@@ -16,7 +16,7 @@ feature 'User edits student', type: :feature do
 
   scenario 'and checks breadcrumbs presence' do
     within('.breadcrumbs') do
-      expect(page).to have_content 'RoR Workhops » Students  » Jan Abacki'
+      expect(page).to have_content 'RoR Workshops » Students » Jan Abacki'
     end
   end
 

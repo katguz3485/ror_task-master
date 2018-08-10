@@ -16,7 +16,7 @@ feature 'User visits teachers page', type: :feature do
 
   scenario 'should see teachers list' do
     within('.breadcrumbs') do
-      expect(page).to have_content 'RoR Workhops » Teachers'
+      expect(page).to have_content 'RoR Workshops » Teachers'
     end
 
     expect(page).to have_content 'Pies'

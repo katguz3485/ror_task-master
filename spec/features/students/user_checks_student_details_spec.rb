@@ -17,7 +17,7 @@ feature 'User checks student details', type: :feature do
   scenario do
     Capybara::Screenshot.screenshot_and_open_image
     within('.breadcrumbs') do
-      expect(page).to have_content 'RoR Workhops » Students » Jan Nowak'
+      expect(page).to have_content 'RoR Workshops » Students » Jan Nowak'
     end
   end
 

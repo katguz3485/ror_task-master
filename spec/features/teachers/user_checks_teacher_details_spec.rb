@@ -11,7 +11,7 @@ feature 'User checks teacher details', type: :feature do
 
   scenario do
     within('.breadcrumbs') do
-      expect(page).to have_content 'RoR Workhops » Teachers » Dr. Pies Pluto'
+      expect(page).to have_content 'RoR Workshops » Teachers » Dr. Pies Pluto'
     end
   end
 end
