@@ -2,13 +2,13 @@ require 'rails_helper'
 
 RSpec.describe SubjectItemsController, type: :controller do
 
-  let(:user) {create :user}
+  let(:user) { create :user }
 
-  before {sign_in user}
+  before { sign_in user }
 
   describe 'GET #show' do
-    let(:subject_item) {create :subject_item}
-    subject {get :show, params: {id: subject_item.id}}
+    let(:subject_item) { create :subject_item }
+    subject {get :show, params: { id: subject_item.id} }
 
     it_behaves_like 'template rendering action', :show
   end
@@ -21,7 +21,7 @@ RSpec.describe SubjectItemsController, type: :controller do
   end
 
   describe 'GET #edit' do
-    let(:subject_item) {create :subject_item}
+    let(:subject_item) { create :subject_item}
     subject {get :edit, params: {id: subject_item.id}}
 
     it_behaves_like 'template rendering action', :edit
@@ -56,8 +56,6 @@ RSpec.describe SubjectItemsController, type: :controller do
       it_behaves_like 'template rendering action', :new
     end
   end
-
-
 end
 
 
