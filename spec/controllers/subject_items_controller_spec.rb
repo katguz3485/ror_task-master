@@ -53,25 +53,8 @@ RSpec.describe SubjectItemsController, type: :controller do
     context 'failure' do
       include_context 'record save failure'
 
-      it it_behaves_like 'template rendering action', :new
+      it_behaves_like 'template rendering action', :new
     end
-  end
-
-  describe 'DELETE #destroy' do
-    let!(:subject_item) {create :subject_item}
-    subject {delete :destroy, params: {id: subject_item.id}}
-
-    it {is_expected.to redirect_to subject_item_path(subject_item)}
-
-    it 'flashes info' do
-      subject
-      expect(flash[:notice]).to eq I18n.t('shared.deleted', resource: 'Subject Item')
-    end
-
-    it 'destroys subject item' do
-      expect {subject}.to change(SubjectItem, :count).by(-1)
-    end
-
   end
 
 

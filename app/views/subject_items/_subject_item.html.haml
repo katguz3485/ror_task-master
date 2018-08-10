@@ -8,7 +8,7 @@
     = link_to edit_subject_item_path(subject_item), {title: t('shared.edit')} do
       %button.btn.btn-default
         =fa_icon "edit"
-    = link_to subject_item_path(subject_item), {method: :delete, title: t('shared.delete')} do
+    = link_to subject_item_path(subject_item), {method: :delete, title: t('shared.delete'), data: {confirm: "Are you sure?"}} do
       %button.btn.btn-default
         =fa_icon "times"
 
