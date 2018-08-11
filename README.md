@@ -5,11 +5,7 @@
 
 ## App description
 
-Simple application for managing school subjects, teaching staff and students - created to learn RoR basics
-
-Don't know how sth should work?
-Check it out [http://ror-workshops.herokuapp.com/](http://ror-workshops.herokuapp.com/)
-
+Simple application for managing school subjects, teaching staff and students - task solved to learn RoR basics
 
 ## Technology stack
 
@@ -29,4 +25,4 @@ Check it out [http://ror-workshops.herokuapp.com/](http://ror-workshops.herokuap
 
 ## Heroku
 
-Heroku url 
+Heroku preview of the app:  [https://stormy-shore-35432.herokuapp.com/](https://stormy-shore-35432.herokuapp.com/ )
