@@ -25,4 +25,4 @@ Simple application for managing school subjects, teaching staff and students - t
 
 ## Heroku
 
-Heroku preview of the app:  [https://stormy-shore-35432.herokuapp.com/](https://stormy-shore-35432.herokuapp.com/ )
+Heroku preview of the app:  [https://safe-stream-65449.herokuapp.com/](https://safe-stream-65449.herokuapp.com/ )
