@@ -1,6 +1,8 @@
 language: ruby
 rvm:
 - 2.5.1
+cache:
+- bundler
 services:
 - postgresql
 addons:
@@ -8,8 +10,9 @@ addons:
 before_install:
   - travis_retry gem update --system
 before_script:
-- cp config/database.yml.ci config/database.yml
-- psql -c 'create database travis_ci_test;' -U postgres
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+- bundle exec rake assets:precompile
 script:
 - bundle exec rails db:migrate RAILS_ENV=test
 - bundle exec rspec
@@ -18,5 +21,6 @@ deploy:
   api_key:
     secure: "J5gcqxqS0XvdgktGM4WV1EYZEoZnw9LB43JE21wSkVp49ffhikSau0kM7EZoO6B6K5sUod1nZnXZWeuOBILMCawKPuVYVaX/suynKHF+kTtsEjhomhp10ZVeLHNhgLO3Tl/c/tYlTUbDNQPGvZpkmKfswEb/v8i5N4mOHNdFeDtVjAZTKfsrCk8gCZjqNB3KDR6GRTydhJDgCS40E1QFTOXnTH0F0q1PBiq4jEAg8VxG8fcW2+eb2R5/iUv/FGLjxmeUYvORkAb4ZKELQbDh6mrdbqLXw4hLDJ+IRg4Exck+GUEWOPJ2BFoxJ7/xenE6ENxmEWdtTVLM8TPV2wkP2ooBKNNahU0WG8bFwuUA8Chjhrlqvy8o0C8CJ5laof9YIdM2z8l9cCYz3ersGcIU63w12jXQDWHabjmi7pK1mKou11KMJFSd5BW/tMcaEek8HIfFP8uNiSO0koNYaxkmwcBjqFwSWYV3yxJ6d4fbqil5qrzdGSBQko6AG3DYcll4sxxU2l/Y6hR0QZUf3TY/OVPNS0Du7ux5a3RSI7WUYGITr9LzdbkReWqa0Op9C4Iu10S2v4U54kIOEHprpx9r4+r2dg4xs/kONM2oy7XfydWd0QlL543ubV5sHJ2ijBiN70AAbe9GOT9NjC4ARZ9aPBlNLlLOd7msQmCLm6zm5lQ="
   app: rails-task-master
+  run: rake db:migrate
   on:
     repo: katguz3485/rails-task-master
