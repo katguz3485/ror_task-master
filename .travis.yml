@@ -1,10 +1,8 @@
 language: ruby
 rvm:
 - 2.5.1
-before_install:
-- gem update --system
-- gem update --remote bundler
 before_script:
+- travis_retry gem update --system
 - cp config/database.yml.ci config/database.yml
 - psql -c 'create database travis_ci_test;' -U postgres
 script:
