@@ -7,6 +7,9 @@ services:
 - postgresql
 addons:
   postgresql: "10.4"
+before_script:
+- cp config/database.yml.travis config/database.yml
+- psql -c 'create database travis_ci_test;' -U postgres
 before_install:
   - travis_retry gem update --system
 before_script:
