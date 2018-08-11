@@ -3,8 +3,9 @@ connection: &connection
  encoding: unicode
  host:     localhost
  pool: 5
- username: ENV["APP_DATABASE_USER"]
- password: ENV["APP_DATABASE_PASSWORD"]
+ username: <%= ENV['RAILS_PG_USERNAME'] || Rails.application.credentials.dig(:postgres, :username) %>
+ password: <%= ENV['RAILS_PG_PASS'] || Rails.application.credentials.dig(:postgres, :password) %>
+
 
 development:
  <<: *connection
