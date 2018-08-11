@@ -6,10 +6,10 @@ cache:
 services:
 - postgresql
 addons:
-  postgresql: "10"
+  postgresql: "9.6"
 before_script:
-- psql -c 'create database travis_ci_test;' -U postgres
-- cp config/database.yml.travis config/database.yml
+- "psql -c 'create database travis_ci_test;' -U postgres"
+- "cp config/database.yml.travis config/database.yml"
 test:
   adapter: postgresql
   database: travis_ci_test
