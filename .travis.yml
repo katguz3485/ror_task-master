@@ -6,10 +6,13 @@ cache:
 services:
 - postgresql
 addons:
-  postgresql: "10.4"
+  postgresql: "10"
 before_script:
-- cp config/database.yml.travis config/database.yml
 - psql -c 'create database travis_ci_test;' -U postgres
+- cp config/database.yml.travis config/database.yml
+test:
+  adapter: postgresql
+  database: travis_ci_test
 before_install:
   - travis_retry gem update --system
 script:
