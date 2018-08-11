@@ -1,4 +1,6 @@
 language: ruby
+sudo: required
+dist: precise
 before_install:
 - gem install bundler
 before_script:
