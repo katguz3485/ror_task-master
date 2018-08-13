@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 require 'rails_helper'
 
 feature 'Visitors signs up', type: :feature do
-
   let(:user) { create :user }
 
   scenario 'with valid email and password' do

@@ -1,5 +1,6 @@
-feature 'User checks teacher details', type: :feature do
+# frozen_string_literal: true
 
+feature 'User checks teacher details', type: :feature do
   let!(:teacher) { create :teacher, first_name: 'Pies', last_name: 'Pluto', academic_title: 'Dr.' }
 
   background do

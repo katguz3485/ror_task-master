@@ -22,6 +22,7 @@ gem 'jbuilder'
 gem 'jquery-datatables-rails'
 gem 'jquery-rails'
 gem 'pg'
+gem 'pry'
 gem 'rails', '~> 5.2.0'
 gem 'rails-controller-testing'
 gem 'rubocop'
@@ -29,8 +30,6 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'turbolinks'
 gem 'uglifier'
-gem 'pry'
-
 
 group :development do
   gem 'better_errors'
@@ -40,16 +39,14 @@ group :development do
   gem 'rails_layout'
   gem 'spring-commands-rspec'
   gem 'web-console'
-
 end
 
 group :development, :test do
   gem 'byebug'
-  #gem 'factory_bot'
+  # gem 'factory_bot'
   gem 'factory_bot_rails'
   gem 'rspec-rails'
   gem 'spring'
-
 end
 
 group :production do
@@ -61,11 +58,11 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'capybara-screenshot', group: :test
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
   gem 'shoulda'
   gem 'shoulda-matchers', require: false
-  gem 'capybara-screenshot', :group => :test
-  #gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
+  # gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
 end

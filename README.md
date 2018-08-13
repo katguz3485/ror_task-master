@@ -23,6 +23,9 @@ Simple application for managing school subjects, teaching staff and students - t
 * Database creation
 `rails db:setup`
 
+* Running rails server
+`rails s`
+
 ## Heroku
 
 Heroku preview of the app:  [https://safe-stream-65449.herokuapp.com/](https://safe-stream-65449.herokuapp.com/ )

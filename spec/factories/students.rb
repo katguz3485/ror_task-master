@@ -2,8 +2,8 @@
 
 FactoryBot.define do
   factory :student do
-    first_name {Faker::Name.unique.first_name}
-    last_name {Faker::Name.unique.last_name}
-    birthdate {Faker::Date.unique.birthday}
+    first_name { Faker::Name.unique.first_name }
+    last_name { Faker::Name.unique.last_name }
+    birthdate { Faker::Date.unique.birthday }
   end
 end

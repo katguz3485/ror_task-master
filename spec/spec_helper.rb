@@ -1,13 +1,12 @@
 # frozen_string_literal: true
+
 require 'rails/all'
-require File.expand_path("../../config/environment", __FILE__)
+require File.expand_path('../config/environment', __dir__)
 require 'factory_bot'
 require 'capybara/rspec'
 
-
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
     # and `failure_message` of custom matchers include text for helper methods
@@ -36,10 +35,6 @@ RSpec.configure do |config|
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
   config.filter_run_when_matching :focus
-  config.example_status_persistence_file_path = "spec/examples.txt"
+  config.example_status_persistence_file_path = 'spec/examples.txt'
   config.default_formatter = 'doc' if config.files_to_run.one?
-
-
-
-
 end

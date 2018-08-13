@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Features
   module SessionHelpers
     def sign_up_with(email, password)
@@ -5,7 +7,7 @@ module Features
       fill_in 'Email', with: email
       fill_in 'user_password', with: password
       fill_in 'Password confirmation', with: password
-      within(".form-actions") do
+      within('.form-actions') do
         click_on 'Sign up'
       end
     end
@@ -20,7 +22,7 @@ module Features
 
     def logout
       visit destroy_user_session_path
-      #click_on 'Logout'
+      # click_on 'Logout'
     end
   end
 end

@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class SubjectItemNotesController < ApplicationController
   expose(:subject_item_note, attributes: :subject_item_note_params)
-  expose :subject_item_notes, -> {SubjectItemNote.all}
+  expose :subject_item_notes, -> { SubjectItemNote.all }
 
   before_action :authenticate_user!
   skip_before_action :verify_authenticity_token
@@ -31,8 +33,4 @@ class SubjectItemNotesController < ApplicationController
   def subject_item_note_params
     params.require(:subject_item_note).permit(:student_id, :subject_item_id, :value)
   end
-
-
 end
-
-

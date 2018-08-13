@@ -29,10 +29,10 @@ end
 
 crumb :subject_item do
   link t('navbar.subject_item'), subject_items
-end 
+end
 
 crumb :subject_item do |subject_item|
-  link "#{subject_item.title}", subject_item_path
+  link subject_item.title.to_s, subject_item_path
   parent :subject_items
 end
 

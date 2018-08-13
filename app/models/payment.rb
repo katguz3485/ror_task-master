@@ -2,6 +2,6 @@
 
 class Payment < ActiveRecord::Base
   belongs_to :student, required: false, optional: true
-  #belongs_to :student, optional: true
+  # belongs_to :student, optional: true
   validates :sum, :date, :student, presence: true
 end

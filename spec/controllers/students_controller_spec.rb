@@ -1,42 +1,44 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe StudentsController, type: :controller do
-  let(:user) {create :user}
+  let(:user) { create :user }
 
-  before {sign_in user}
+  before { sign_in user }
 
   describe 'GET #show' do
-    let(:student) {create :student}
-    subject {get :show, params: {id: student.id}}
+    let(:student) { create :student }
+    subject { get :show, params: { id: student.id } }
 
     it_behaves_like 'template rendering action', :show
   end
 
   describe 'GET #index' do
-    subject {get :index}
+    subject { get :index }
 
     it_behaves_like 'template rendering action', :index
   end
 
   describe 'GET #edit' do
-    let(:student) {create :student}
-    subject {get :edit, params: {id: student.id}}
+    let(:student) { create :student }
+    subject { get :edit, params: { id: student.id } }
 
     it_behaves_like 'template rendering action', :edit
   end
 
   describe 'GET #new' do
-    subject {get :new}
+    subject { get :new }
 
     it_behaves_like 'template rendering action', :new
   end
 
   describe 'POST #create' do
-    let!(:params) {{student: build(:student).attributes}}
-    subject {post :create, params: params}
+    let!(:params) { { student: build(:student).attributes } }
+    subject { post :create, params: params }
 
     context 'success' do
-      it {is_expected.to redirect_to student_path(controller.student)}
+      it { is_expected.to redirect_to student_path(controller.student) }
 
       it 'flashes info' do
         subject
@@ -44,7 +46,7 @@ RSpec.describe StudentsController, type: :controller do
       end
 
       it 'creates student' do
-        expect {subject}.to change(Student, :count).by(1)
+        expect { subject }.to change(Student, :count).by(1)
       end
     end
 
@@ -55,13 +57,11 @@ RSpec.describe StudentsController, type: :controller do
     end
   end
 
-
-
   describe 'DELETE #destroy' do
-    let!(:student) {create :student}
-    subject {delete :destroy, params: {id: student.id}}
+    let!(:student) { create :student }
+    subject { delete :destroy, params: { id: student.id } }
 
-    it {is_expected.to redirect_to students_path}
+    it { is_expected.to redirect_to students_path }
 
     it 'flashes info' do
       subject

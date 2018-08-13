@@ -17,8 +17,7 @@ RSpec.describe Payment, type: :model do
   end
 
   describe 'associations' do
-    it { is_expected.to belong_to(:student)}
-    #it { is_expected_to.belong_to(:student).optional }
-
+    it { is_expected.to belong_to(:student) }
+    # it { is_expected_to.belong_to(:student).optional }
   end
 end

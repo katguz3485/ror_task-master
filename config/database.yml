@@ -6,7 +6,6 @@ connection: &connection
  username: <%= ENV['RAILS_PG_USERNAME'] || Rails.application.credentials.dig(:postgres, :username) %>
  password: <%= ENV['RAILS_PG_PASS'] || Rails.application.credentials.dig(:postgres, :password) %>
 
-
 development:
  <<: *connection
  database: workshops_development

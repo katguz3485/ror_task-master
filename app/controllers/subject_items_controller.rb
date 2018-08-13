@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 class SubjectItemsController < ApplicationController
   expose(:subject_item, attributes: :subject_item_params)
-  expose :subject_items, -> {SubjectItem.all}
+  expose :subject_items, -> { SubjectItem.all }
 
   before_action :authenticate_user!
   skip_before_action :verify_authenticity_token
-
 
   def create
     if subject_item.save
@@ -32,6 +33,4 @@ class SubjectItemsController < ApplicationController
   def subject_item_params
     params.require(:subject_item).permit(:title, :teacher_id)
   end
-
-
 end
