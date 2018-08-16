@@ -53,7 +53,6 @@ group :production do
   gem 'heroku-deflater'
   gem 'pg'
   gem 'puma'
-  gem 'rails_12factor'
 end
 
 group :test do
