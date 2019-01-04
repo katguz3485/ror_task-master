@@ -4,14 +4,14 @@
   %td= teacher.academic_title
   %td
     = link_to teacher_path(teacher), { title: t('shared.show') } do
-      %button.btn.btn-default
+      %button.btn.btn-primary
         = fa_icon "search"
     = link_to edit_teacher_path(teacher), { title: t('shared.edit') } do
-      %button.btn.btn-default
+      %button.btn.btn-primary
         = fa_icon "edit"
     = link_to teacher_path(teacher), { method: :delete, title: t('shared.delete') } do
-      %button.btn.btn-default
+      %button.btn.btn-primary
         = fa_icon "times"
     = link_to teacher_subjects_path(teacher), { title: t('shared.show_subject_items') } do
-      %button.btn.btn-default
+      %button.btn.btn-primary
         = fa_icon "list"

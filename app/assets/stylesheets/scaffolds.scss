@@ -1,43 +1,63 @@
 @import "framework_and_overrides";
 
 body {
-  background-color: #fff;
-  color: #333333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  background-color: $white;
+  color: $black;
+  font-family: inherit;
+  font-size: inherit;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-family: $headings-font-family;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+li {
+  font-family: $headings-font-family;
+  font-size: inherit;
+  color: $white;
+  line-height: 20px;
+  margin-right: 20px;
 }
 
 pre {
-  background-color: #eee;
+  background-color: $white;
   padding: 10px;
   font-size: 11px;
 }
 
+.dropdown-menu {
+  background-color: $gray-500;
+  margin-bottom: 10px;
+  padding-left:  15px;
+  color: black;
+}
+
 a {
-  color: #000;
+
+  color: $white;
 
   &:visited {
-    color: #666;
+    color: $white;
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: $white;
+    background-color: $teal;
   }
 }
+
 
 div {
   &.field, &.actions {
     margin-bottom: 10px;
   }
 }
+
+
+
 
 #notice {
   color: green;

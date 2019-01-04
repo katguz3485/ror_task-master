@@ -164,7 +164,6 @@ section {
 }
 
 
-
 .header {
   color: white;
   text-shadow: black 0.3em 0.3em 0.3em;
@@ -175,30 +174,23 @@ section {
   padding-left:  50px;
 }
 
-.breadcrumbs {
-  padding-bottom: 30px;
-
-  a:first-child {
-    padding: 0 5px 0 0;
-  }
-
-  a, .current {
-    padding: 0 5px;
-  }
-}
 
 a:hover, a:focus {
   text-decoration: none;
 }
 
 .jumbotron {
-  background-image: asset_url('blackboard.jpg');
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
   background-size: cover;
-  height: 350px;
+  position: center;
+  background-image: asset_url("blackboard.png");
+
 }
 
 .jumbotron h2 {
-  color: #ffffff;
+  color: $white;
   text-align: center;
   margin-bottom: 30px;
   letter-spacing: -1px;
