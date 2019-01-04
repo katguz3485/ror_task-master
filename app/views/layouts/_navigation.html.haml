@@ -1,37 +1,32 @@
-%nav.navbar-default.navbar-fixed-top
-  .container-fluid
-    .navbar-header
-      %button.navbar-toggle{"aria-controls" => "navbar", "aria-expanded" => "true", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      = link_to "RoR Task", root_path, class: 'navbar-brand'
-    #navbar.navbar-collapse.collapse
-      %ul.nav.navbar-nav
-        %li{ class: active?(students_path) }
-          = link_to t('navbar.students'), students_path
-        %li{ class: active?(teachers_path) }
+%nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+  %a.navbar-brand{:href => root_path} RoR Task
+  %button.navbar-toggler{"aria-controls" => "navbarColor01", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarColor01", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarColor01.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto
+      %li.nav-item.active
+        = link_to t('navbar.students'), students_path
+        %li.nav-item.active
           = link_to t('navbar.teachers'), teachers_path
-        %li{ class: active?(payments_path) }
+        %li.nav-item.active
           = link_to t('navbar.payments'), payments_path
-        %li{ class: active?(subject_items_path) }
+        %li.nav-item.active
           = link_to t('navbar.subject_items'), subject_items_path
-        %li{ class: active?(subject_item_notes_path) }
+        %li.nav-item.active
           = link_to t('navbar.subject_item_notes'), subject_item_notes_path
-        %li.dropdown{ class: active?(report_subjects_path) }
+        %li.dropdown.active
           = link_to t('navbar.reports'), class: 'dropdown-toggle', 'aria-expanded' => 'false', 'aria-haspopup' => 'true', 'data-toggle' => 'dropdown', role: 'button' do
             = t('navbar.reports')
             %span.caret
           %ul.dropdown-menu
-            %li{ class: active?(report_subjects_path) }
+            %li.nav-item.active
               = link_to t('navbar.reports_subjects'), report_subjects_path
-      %ul.nav.navbar-nav.navbar-right
-        - if user_signed_in?
-          %li
-            = link_to t('navbar.logout'), destroy_user_session_path, method: :delete
-        - else
-          %li
-            = link_to t('navbar.signin'), new_user_session_path
-          %li
-            = link_to t('navbar.signup'), new_user_registration_path
+    %ul.nav.navbar-nav.ml-auto
+      - if user_signed_in?
+        %li.btn.btn-secondary.my-2.my-sm-0
+          = link_to t('navbar.logout'), destroy_user_session_path, method: :delete
+      - else
+        %li.btn.btn-secondary.my-2.my-sm-0
+          = link_to t('navbar.signin'), new_user_session_path
+        %li.btn.btn-secondary.my-2.my-sm-0
+          = link_to t('navbar.signup'), new_user_registration_path

@@ -1,73 +1,111 @@
+@import "framework_and_overrides";
+
 body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  background-color: $white;
+  color: $black;
+  font-family: inherit;
+  font-size: inherit;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-family: $headings-font-family;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+li {
+  font-family: $headings-font-family;
+  font-size: inherit;
+  color: $white;
+  line-height: 20px;
+  margin-right: 20px;
 }
 
 pre {
-  background-color: #eee;
+  background-color: $white;
   padding: 10px;
   font-size: 11px;
 }
 
-a {
-  color: #000;
+#navbarColor01.collapse.navbar-collapse {
 
-  &:visited {
-    color: #666;
-  }
+  a {
+    color: $white;
 
-  &:hover {
-    color: #fff;
-    background-color: #000;
+    &:visited {
+      color: $white;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $gray-500;
+    }
   }
 }
-
-div {
-  &.field, &.actions {
+  .dropdown-menu {
+    background-color: $gray-500;
     margin-bottom: 10px;
-  }
-}
-
-#notice {
-  color: green;
-}
-
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
-
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-
-  h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff;
+    padding-left: 15px;
+    color: black;
   }
 
-  ul li {
-    font-size: 12px;
-    list-style: square;
+
+  a {
+    color: $black;
+
+    &:visited {
+      color: $black;
+    }
+
+    &:hover {
+      color: $black;
+      background-color: $gray-300;
+    }
   }
-}
+
+  div {
+    &.field, &.actions {
+      margin-bottom: 10px;
+    }
+  }
+
+  #notice {
+    color: green;
+    font-size: inherit;
+    font-family: inherit;
+
+  }
+
+  .field_with_errors {
+    padding: 2px;
+    background-color: red;
+    display: table;
+
+  }
+
+  #error_explanation {
+    width: 450px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    background-color: $white;
+
+    h2 {
+      text-align: left;
+      font-family: $headings-font-family;
+      padding: 5px 5px 5px 15px;
+      font-size: inherit;
+      margin: -7px;
+      margin-bottom: 0px;
+      background-color: #c00;
+      color: #fff;
+    }
+
+    ul li {
+      font-size: inherit;
+      font-family: $headings-font-family;
+      list-style: square;
+    }
+  }

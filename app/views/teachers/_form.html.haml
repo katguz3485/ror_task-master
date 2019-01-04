@@ -3,7 +3,7 @@
   = f.input :last_name
   = f.input :academic_title, collection: Teacher::TITLES, include_blank: false
   = f.association :subject_items, label_method: :title, value_method: :id, label: 'Subject Items', as: :check_boxes
-  = link_to t('shared.back'), teachers_path, class: 'btn btn-default'
+  = link_to t('shared.back'), teachers_path, class: 'btn btn-secondary'
   = f.button :submit
 
 

@@ -18,7 +18,7 @@ en:
     edit: edit
     show: show
     delete: delete
-    show_subject_items: show subjects
+    show_subject_items: show subjectssimp
     back: Back
     add_new_item: Add new one
     subjects: subjects

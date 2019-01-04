@@ -3,13 +3,13 @@
   %td= subject_item_note.decorate.student_full_name
   %td
     = link_to subject_item_note_path(subject_item_note), {title: t('shared.show')} do
-      %button.btn.btn-default
+      %button.btn.btn-primary
         =fa_icon "search"
     = link_to edit_subject_item_note_path(subject_item_note), {title: t('shared.edit')} do
-      %button.btn.btn-default
+      %button.btn.btn-primary
         =fa_icon "edit"
     = link_to subject_item_note_path(subject_item_note), {method: :delete, title: t('shared.delete')} do
-      %button.btn.btn-default
+      %button.btn.btn-primary
         =fa_icon "times"
 
 

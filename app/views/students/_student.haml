@@ -3,14 +3,14 @@
   %td= student.last_name
   %td
     = link_to student_path(student), { title: t('shared.show') } do
-      %button.btn.btn-default
+      %button.btn.btn-primary
         = fa_icon "search"
     = link_to edit_student_path(student), { title: t('shared.edit') } do
-      %button.btn.btn-default
+      %button.btn.btn-primary
         = fa_icon "edit"
     = link_to student_path(student), { method: :delete, title: t('shared.delete') } do
-      %button.btn.btn-default
+      %button.btn.btn-primary
         = fa_icon "times"
     = link_to student_subjects_path(student), { title: t('shared.show_subject_items') } do
-      %button.btn.btn-default
+      %button.btn.btn-primary
         = fa_icon "list"
