@@ -39,7 +39,7 @@ pre {
 
     &:hover {
       color: $white;
-      background-color: $gray-200;
+      background-color: $gray-500;
     }
   }
 }
@@ -70,15 +70,18 @@ pre {
     }
   }
 
-
   #notice {
     color: green;
+    font-size: inherit;
+    font-family: inherit;
+
   }
 
   .field_with_errors {
     padding: 2px;
     background-color: red;
     display: table;
+
   }
 
   #error_explanation {
@@ -87,13 +90,13 @@ pre {
     padding: 7px;
     padding-bottom: 0;
     margin-bottom: 20px;
-    background-color: #f0f0f0;
+    background-color: $white;
 
     h2 {
       text-align: left;
-      font-weight: bold;
+      font-family: $headings-font-family;
       padding: 5px 5px 5px 15px;
-      font-size: 12px;
+      font-size: inherit;
       margin: -7px;
       margin-bottom: 0px;
       background-color: #c00;
@@ -101,7 +104,8 @@ pre {
     }
 
     ul li {
-      font-size: 12px;
+      font-size: inherit;
+      font-family: $headings-font-family;
       list-style: square;
     }
   }
