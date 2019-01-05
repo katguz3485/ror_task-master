@@ -32,7 +32,7 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 
-  config.action_mailer.default_url_options = { :host => "devzssfdfdswawqvf.yourhost.com" }
+  config.action_mailer.default_url_options = { host: 'devzssfdfdswawqvf.yourhost.com' }
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
@@ -55,7 +55,7 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
-  #config.logger = Logger.new(STDOUT)
+  # config.logger = Logger.new(STDOUT)
   config.logger = nil
 
   # Raises error for missing translations

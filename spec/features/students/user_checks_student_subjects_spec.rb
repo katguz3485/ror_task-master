@@ -14,7 +14,7 @@ feature 'User checks student subjects', type: :feature do
     sign_in
     expect(page).to have_content 'Logout'
     visit students_path
-    find(:xpath, "//a[@title='show subjects']").click
+    find(:xpath, "//a[@title='show subjectssimp']").click
   end
 
   scenario do

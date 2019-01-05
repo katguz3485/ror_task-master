@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class StudentsController < ApplicationController
-
   expose(:student, attributes: :student_params)
   expose(:student_subject_items) { student.subject_items }
   expose :students, -> { Student.all }
