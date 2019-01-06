@@ -1,0 +1,66 @@
+@import "framework_and_overrides";
+
+footer {
+
+  padding: 0;
+  text-align: center;
+  font-size: 1em;
+  min-height: 150px;
+  width: 100%;
+    background-color: $gray-600;
+  font-family: $headings-font-family;
+
+
+  .footer-social {
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+
+    a {
+      font-size: 20px;
+      flex:1;
+
+      span:hover {
+        color: $black;
+      }
+      img:hover {
+        -webkit-filter: brightness(0) grayscale(1);
+        filter: brightness(0) grayscale(1);
+      }
+    }
+  }
+
+  .footer-links {
+    display: flex;
+    flex: 2;
+    padding-left: 40px;
+    justify-content: left;
+    align-items: center;
+
+    .footer-links-container {
+      padding-top: 40px;
+      display: flex;
+      width: 130px;
+      height: 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .footer-link {
+      flex-basis: 30px;
+      color: $white;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 0;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}
+
+
+
