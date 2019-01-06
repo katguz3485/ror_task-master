@@ -28,49 +28,16 @@ pre {
   font-size: 11px;
 }
 
-#navbarColor01.collapse.navbar-collapse {
 
-  a {
-    color: $white;
-
-    &:visited {
-      color: $white;
-    }
-
-    &:hover {
-      color: $white;
-      background-color: $gray-500;
-    }
-  }
+.header {
+  color: white;
+  text-shadow: black 0.3em 0.3em 0.3em;
+  background:transparent;
+  font-size: $fs-0;
+  z-index: $z-index-2;
+  margin-top: 100px;
+  padding-left:  50px;
 }
-
-.dropdown-menu {
-  background-color: $gray-500;
-  margin-bottom: 10px;
-  padding-left: 15px;
-  color: black;
-}
-
-
-a {
-  color: $black;
-
-  &:visited {
-    color: $black;
-  }
-
-  &:hover {
-    color: $black;
-    background-color: $gray-300;
-  }
-}
-
-div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
-}
-
 
 
 

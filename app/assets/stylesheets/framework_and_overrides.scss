@@ -164,27 +164,6 @@ section {
 }
 
 
-.bg {
-  @include fixed(20px 0 left 0);
-  @include sizing(100%);
-  position: absolute;
-  background: url(logo.jpg) no-repeat center center;
-  background-size: cover;
-  z-index: -2;
-  top: 0;
-}
-
-.header {
-  color: white;
-  text-shadow: black 0.3em 0.3em 0.3em;
-  background:transparent;
-  font-size: $fs-0;
-  z-index: $z-index-2;
-  margin-top: 100px;
-  padding-left:  50px;
-}
-
-
 
 a:hover, a:focus {
   text-decoration: none;
