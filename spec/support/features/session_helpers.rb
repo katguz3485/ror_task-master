@@ -7,7 +7,7 @@ module Features
       fill_in 'Email', with: email
       fill_in 'user_password', with: password
       fill_in 'Password confirmation', with: password
-      within(:xpath,'//*[@id="new_user"]') do
+      within(:xpath, '//*[@id="new_user"]') do
         click_on 'Sign up'
       end
     end
